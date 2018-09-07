@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1536325792 source:c:\users\juli\desktop\utn ingreso\trabajo practico 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Avramides.h"
+
+1536325082 source:c:\users\juli\desktop\utn ingreso\trabajo practico 1\avramides.c
+
+1536325175 c:\users\juli\desktop\utn ingreso\trabajo practico 1\avramides.h
+
