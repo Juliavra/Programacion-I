@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1538800968 source:f:\utn\c\tp2 v2.0\tp2functions.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"TP2headers.h"
+
+1538800920 source:f:\utn\c\tp2 v2.0\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"TP2headers.h"
+
+1538800904 f:\utn\c\tp2 v2.0\tp2headers.h
+
+1538798608 f:\utn\c\tp2 v2.0\tp2avramides1a.h
+
