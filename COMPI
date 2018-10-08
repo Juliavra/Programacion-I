@@ -1,0 +1,471 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <conio.h>
+
+///-------------------------------------------------------------------------
+///------------------------------------------------------------------------
+///FUNCIONES
+
+/** \brief Generates a unique ID identifier
+*
+* \param NO parameters are received
+* \return ID is the number of ID
+*
+*/
+
+    int generatesNextIdGames()
+    {
+        static int id = 0;
+        id ++;
+        return id;
+    }
+
+
+/** \brief Generates a unique ID identifier
+*
+* \param NO parameters are received
+* \return ID is the number of ID
+*
+*/
+
+        int generatesNextIdClients()
+    {
+        static int id = 0;
+        id ++;
+        return id;
+    }
+
+
+/** \brief Generates a unique ID identifier
+*
+* \param NO parameters are received
+* \return ID is the number of ID
+*
+*/
+        int generatesNextIdRentals()
+    {
+        static int id = 0;
+        id ++;
+        return id;
+    }
+
+/** \brief Main Menu
+ *
+ * \param NO parameters are received
+ * \return usersChoice Contains users selection
+ *
+ */
+
+     int menu (void)
+    {
+        char menuChoice;
+        int usersChoice;
+
+        do
+        {
+            printf("\n\n\n");
+            printf("1-Juegos\t\t");
+            printf("2-Clientes\t\t");
+            printf("3-alquileres\t");
+            printf("4-SALIR\n\n");
+            printf("Que es lo que desea hacer? ");
+
+            menuChoice= getche();
+
+            switch (menuChoice)
+            {
+
+            case 49:
+            {///juegos
+                usersChoice=1;
+                break;
+            }
+
+            case 50:
+            {///clientes
+
+                usersChoice=2;
+                break;
+            }
+
+            case 51:
+            {///alquileres
+                usersChoice=3;
+                break;
+            }
+
+            case 52:
+            {///salir
+                usersChoice=4;
+                break;
+            }
+
+            default :
+            {
+                break;
+            }
+
+            }
+
+        }
+        while (usersChoice<1 || usersChoice>4);  ///lo que no quiero
+
+        return usersChoice;
+    }
+
+
+/** \brief Initializes all position in the Array to Empty.
+ *isEmpty=0 FALSE (POSITION TAKEN) / isEmpty=1  TRUE (EMPTY ARRAY POSITION)
+ * \param Employee list [], Pointer to Array of games
+ * \param len int length of the Array of games
+ * \return int Return (-1) if Error [Invalid length or NULL pointer] - (0) if Ok
+ *
+ */
+
+int initGames(eGames list [], int len)
+{
+    int rtn=-1;
+    if (list!=NULL && len >0)
+    {
+        for (int i=0; i<len; i++)
+        {
+            list[i].isEmpty=1;
+        }
+        rtn=0;
+    }
+    return rtn;
+}
+
+
+
+/** \brief Initializes all position in the Array to Empty.
+ *isEmpty=0 FALSE (POSITION TAKEN) / isEmpty=1  TRUE (EMPTY ARRAY POSITION)
+ * \param Employee list [], Pointer to Array of games
+ * \param len int length of the Array of games
+ * \return int Return (-1) if Error [Invalid length or NULL pointer] - (0) if Ok
+ *
+ */
+
+int initClients (eClients list [], int len)
+{
+    int rtn=-1;
+    if (list!=NULL && len >0)
+    {
+        for (int i=0; i<len; i++)
+        {
+            list[i].isEmpty=1;
+        }
+        rtn=0;
+    }
+    return rtn;
+}
+
+
+
+/** \brief Initializes all position in the Array
+ *isEmpty=0 FALSE (POSITION TAKEN) / isEmpty=1  TRUE (EMPTY ARRAY POSITION)
+ * \param Employee list [], Pointer to Array
+ * \param len int length of the Array
+ * \return int Return (-1) if Error [Invalid length or NULL pointer] - (0) if Ok
+ *
+ */
+
+int initRentals(eRentals list [], int len)
+{
+    int rtn=-1;
+    if (list!=NULL && len >0)
+    {
+        for (int i=0; i<len; i++)
+        {
+            list[i].isEmpty=1;
+        }
+        rtn=0;
+    }
+    return rtn;
+}
+
+
+/** \brief validates that input char contains only letters
+ *
+ * \param auxiliarInput[] char input user received from main
+ * \return lettersOnly int validation result
+ *
+ */
+
+    int lettersOnly (char auxiliarInput[])
+    {
+        int isalpha_result;              /// HOLDS RESULT OF ISALPHA FUNCTION
+        int txt_length;               ///HOLDS LENGTH OF TEXT ARRAY
+        int lettersOnly=1;     ///if=0 INVALID VALUE // IF=1 VALID VALUE
+
+        txt_length=strlen (auxiliarInput);
+
+        for (int i=0; i<txt_length-1; i++)
+        {
+            isalpha_result=isalpha(auxiliarInput[i]);
+
+            if (auxiliarInput[i]==32)
+            {
+                /// Condition used to prevent if(isalpha_result==0)
+                /// to transform lettersOnly=0 because of an empty space
+            }
+            else if (isalpha_result==0)
+            {
+                lettersOnly=0;
+                break;
+            }
+            auxiliarInput[txt_length-1]= 00;              ///This instruction is due to the fact of fgets adding an enter char at the end of the array
+        }
+        return lettersOnly;
+    }
+
+    /** \brief validates that input char contains only numbers
+ *
+ * \param auxiliarInput[] char input user received from main
+ * \return numbersOnlyChar int validation result
+ *
+ */
+
+    int numbersOnly (char auxiliarInput[])
+    {
+        int isdigit_result;              /// HOLDS RESULT OF ISALPHA FUNCTION
+        int array_length;               ///HOLDS LENGTH OF TEXT ARRAY
+        int numbersOnlyChar=1;     ///if=0 INVALID VALUE // IF=1 VALID VALUE
+
+        if(auxiliarInput>0)
+        {
+            printf ("no puede haber valores menores que cero!");
+        }
+
+        else
+        {
+        array_length=strlen (auxiliarInput);
+        for (int i=0; i<array_length-1; i++)
+        {
+            isdigit_result=isdigit(auxiliarInput[i]);
+
+            if (auxiliarInput[i]==46)
+            {
+                /// Condition used to prevent if(isdigit_result==0)
+                /// transform numbersOnlyChar=0 because of a dot
+            }
+
+            else if (isdigit_result==0)
+            {
+                numbersOnlyChar=0;
+                break;
+            }
+        }
+        }
+        return numbersOnlyChar;         ///if=0 INVALID VALUE // IF=1 VALID VALUE
+    }
+
+
+    /** \brief add in a existing list of employees the values received as parameters
+* in the first empty position
+* \param Employee *list: Pointer to Array of employees
+* \param len int: length of the Array of employees
+* \param id int: Unique identifier for each employee
+* \param name[] char: Contains employee name
+* \param lastName[] char: Contains employee last name
+* \param salary float: Contains employee salary
+* \param sector int: Contains employee sector
+* \return int Return (-1) if Error [Invalid length or NULL pointer or without
+free space] - (0) if Ok
+*
+*/
+
+int addGame (eGames list, int len, int id, char description[],int price);
+{
+    int rtn=-1;
+    int freeIndex;
+
+    freeIndex= obtainFreeSpace(list, len);
+
+    if (freeIndex!=-1)
+    {
+        if (list!=NULL && len >0)
+        {
+            list[freeIndex].id=id;
+            strcpy (list[freeIndex].name, name);
+            strcpy (list[freeIndex].lastName,lastName);
+            list[freeIndex].salary=salary;
+            list[freeIndex].sector=sector;
+            list[freeIndex].isEmpty=0;
+
+            rtn=0;
+        }
+    }
+        return rtn;
+}
+
+
+
+//------------------------------------------------------------------
+//-----------------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <conio.h>
+#define GAMES 3
+#define CLIENTS 3
+#define RENT 3
+
+
+int addGame (games, int len, int id, char description[],int price);
+
+///PROTOTYPES
+
+typedef struct
+{
+     int gameId;
+    char description [51];
+    int price;
+    int isEmpty;
+} eGames;
+
+typedef struct
+{
+    int clientId;
+    char name [51];
+    char lastName [51];
+    char sex;
+    char address;
+    int isEmpty;
+} eClients;
+
+typedef struct
+{
+    int rentalsId;
+    int gameId;
+    int clientId;
+    int date;
+    int isEmpty;
+} eRentals;
+
+eGames games [GAMES];
+eClients clients [CLIENTS];
+eRentals rentals [RENT];
+
+
+initGames (games, GAMES);
+initClients (clients, CLIENTS);
+initRentals (rentals, RENT);
+
+
+int main()
+{
+
+///DEFINE VARIABLES
+int menuChoice;
+int addOne;
+int freespace;
+
+
+    int menuChoice;     /// Contains value for user selection inside menu
+    int addedFirstGame;     /// addFirst is flag, not to allow any menu option until 1 game is added (0= Already added / 1=no Adds yet  )
+    int addedFirstClient;     /// addFirst is flag, not to allow any menu option until 1 client is added (0= Already added / 1=no Adds yet  )
+    int addedFirstRent;     /// addFirst is flag, not to allow any menu option until 1 rent is added (0= Already added / 1=no Adds yet  )
+    int modifyId;
+    char modifyselected;
+    int id;
+    char name [51];
+    char lastName [51];
+    int addOne;                 /// Verifies user wants to Add Employee
+    int freespace;              /// se carga el return de obtener espacio libre
+    char auxiliarInput [100];   /// this char is used to get all input from user
+    int validationResult;       /// holds result brought by function called
+    int indexIs;
+    char printSelection;
+    int order;                  /// order selection for Sort of employees
+    char orderOption;
+    char exit;
+     int validationPrice;
+    int price;
+
+
+///--------------------------------------------------------------------------------------------------------
+///MAIN     MAIN        MAIN
+ do
+    {
+        menuChoice= menu () ;   /// calls menu to the screen
+
+        switch (menuChoice)
+        {
+
+        case 1:
+        {
+            ///GAMES
+
+            printf("\n\n Desea dar de alta un nuevo juego?");
+            printf("\n\n\t 1-Si \t\t 2-No  \n\n");
+            printf("?");
+            addOne=getche ();
+
+            while (addOne<49||addOne>50)
+            {
+                addOne=getche ();
+            }
+
+            if (addOne==49)
+            {
+                freespace= obtainFreeSpace(games, GAMES);
+
+                if (freespace !=-1)
+                {
+                    id= generatesNextIdGames();
+
+                    printf("\n\n\n Juego: %d", id);
+
+                    printf("\n\n Ingrese el nombre del juego: ");
+                    fflush(stdin);
+                    fgets(auxiliarInput, 50, stdin);
+                    validationResult= lettersOnly(auxiliarInput);
+
+
+                    while (validationResult==0)
+                    {
+                        printf("\n Nombre INVALIDO\n\nIngrese nombre nuevamente: ");
+                        fflush(stdin);
+                        fgets(auxiliarInput, 50, stdin);
+                        validationResult= lettersOnly(auxiliarInput);
+                    }
+
+                    chanceCase (auxiliarInput);
+                    strcpy (name, auxiliarInput);
+
+                 printf("\n\n Ingrese el precio del juego: ");
+                    fflush(stdin);
+                    fgets(auxiliarInput, 8, stdin);
+                    validationPrice= numbersOnly(auxiliarInput);
+
+                    while (validationPrice==0)
+                    {
+                        printf("\n Precio  INVALIDO \n\n Ingrese precio nuevamente: ");
+                        fgets (auxiliarInput, 8, stdin);
+                        validationPrice= numbersOnly(auxiliarInput);
+                    }
+
+                    price =  atof (auxiliarInput);
+
+                    addedFirstGame= addGame(games, GAMES, id, name, price)
+                }///CIERRA FREE SPACE
+                else
+                {
+                    system("cls");
+                    printf("\n\n No hay espacio libre para realizar un alta\n\n");
+                }
+
+            }
+
+            break;
+
+        }
+
+
+}
+
