@@ -31,7 +31,6 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="TP2 V2.0.cbp" />
 		<Unit filename="TP2functions.c">
 			<Option compilerVar="CC" />
 		</Unit>

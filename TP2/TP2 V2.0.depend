@@ -19,3 +19,21 @@
 
 1538798608 f:\utn\c\tp2 v2.0\tp2avramides1a.h
 
+1541945690 source:c:\utn\c\tp2 v2.0\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"TP2headers.h"
+
+1539492749 c:\utn\c\tp2 v2.0\tp2headers.h
+
+1541945719 source:c:\utn\c\tp2 v2.0\tp2functions.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"TP2headers.h"
+

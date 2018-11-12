@@ -1,5 +1,7 @@
 ///PROTOTYPES
 
+
+///EMPLOYEE STRUCT
 typedef struct
 {
     int id;
@@ -8,10 +10,10 @@ typedef struct
     float salary;
     int sector;
     int isEmpty;
-} Employee;
+} eEmployee;
 
-///AUXILIAR STRUCT
 
+///AUX EMPLOYEE STRUCT
 typedef struct
 {
     int idAux;
@@ -23,23 +25,59 @@ typedef struct
 } EmployeeAux;
 
 
+/// SECTOR STRUCT
+typedef struct
+{
+    int id;
+    char description[20];
+} eSector;
+
+
+///MEAL DESCRIPTION
+typedef struct
+{
+    int id;
+    char description [51];
+    int isEmptyAux;
+} eMealDescription;
+
+///MEAL DESCRIPTION + EMPLOYEE
+typedef struct
+{
+    int idEmployee;
+    int idMealDescription;
+    int isEmptyAux;
+} eMealDescriptionEmployee;
+
+
 /// INITIALIZE FUNCTIONS
 
-int addEmployee(Employee list[], int len, int id, char name[],char lastName[],float salary,int sector);
-int findEmployeeById(Employee list [], int len,int id);
+int addsEmployee(eEmployee* employees, int EMPLOYEESMAX);
+int savesEmployee (eEmployee list[], int len, int id, char name[],char lastName[],float salary,int sector);
+int findEmployeeById(eEmployee list [], int len,int id);
 int menu (void);
-int initEmployees(Employee list [], int length);
-int obtainFreeSpace(Employee *employees, int ELEMENTS);
-int printEmployees (Employee *employees, int id);
+int initEmployees(eEmployee list [], int length);
+int obtainFreeSpace(eEmployee *employees, int EMPLOYEESMAX);
+int printEmployees (eEmployee *employees, int id);
 int lettersOnly (char auxiliarInput[]);
-int printsEmployee (Employee *employees, int i);
-int removeEmployee(Employee* list, int len, int id);
-float salaryAverage(Employee *employees, int ELEMENTS);
-int overAverage(Employee *employees, int ELEMENTS);
+
+
+///int printsEmployee (eEmployee *employees, int i);
+int printsEmployee (eEmployee  *employees, int i, eSector* sectors);
+
+///int removeEmployee(eEmployee* list, int len);
+int removeEmployee(eEmployee * employees, int EMPLOYEESMAX, eSector* sectors);
+
+char findsSectorDescription (eEmployee  *employees, int i, eSector* sectors);
+
+float salaryAverage(eEmployee *employees, int EMPLOYEESMAX);
+int overAverage(eEmployee *employees, int EMPLOYEESMAX);
 void tags (void);
 int numbersOnly (char auxiliarInput[]);
 void chanceCase  (char auxiliarInput[]);
-int sortEmployees (Employee *employees,int len, int order);
+int sortEmployees (eEmployee *employees,int len, int order);
 int generatesNextId();
-float salaryTotal (Employee *employees, int ELEMENTS);
+float salaryTotal (eEmployee *employees, int V);
 void intro (void);
+void hardCodedEmployees (eEmployee* employees);
+int modifyEmployee (eEmployee* employees, int EMPLOYEESMAX, eSector* sectors);
