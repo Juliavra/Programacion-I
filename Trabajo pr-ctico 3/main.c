@@ -97,21 +97,6 @@ int main()
     }
     while (mainMenuSelection!=10);
 
-
-
-
-
-
-
-    /* do{
-         switch(option)
-         {
-             case 1:
-                 controller_loadFromText("data.csv",listaEmpleados);
-                 break;
-         }
-     }while(option != 10);
-    */
     return 0;
 
 }
