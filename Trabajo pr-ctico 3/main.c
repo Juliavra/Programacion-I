@@ -26,7 +26,8 @@ int mainMenu (void);
 
 int main()
 {
-    int /*r,*/ mainMenuSelection;
+    int mainMenuSelection, isTxtLoaded=0, isBinLoaded=0;
+
     LinkedList* listaEmpleados = ll_newLinkedList();
 
 
@@ -41,18 +42,21 @@ int main()
         case 1:
         {
             ///system("cls");
-            printf("opt %d", mainMenuSelection);
-            controller_loadFromText("data.csv",listaEmpleados);
-            system("pause");
-            break;
+            if (isTxtLoaded==0 && isBinLoaded!=1)
+            {
+                controller_loadFromText("data.csv",listaEmpleados);
+                system("pause");
+                break;
+            }
         }
+
         case 2:
         {printf("opt %d", mainMenuSelection);
             controller_loadFromBinary("data.bin",listaEmpleados);
             break;
         }
         case 3:
-        {printf("opt %d", mainMenuSelection);
+        {
             controller_addEmployee(listaEmpleados);
             break;
         }
@@ -140,7 +144,7 @@ int mainMenu (void)
     do
     {
        /// system("cls");
-        printf("\t\t\t\tMENU PRINCIPAL\n\n\n");
+        printf("\t\t\t\tMENU PRINCIPAL\tJULIAN\n\n\n");
 
         printf("1. Cargar los datos de los empleados desde el archivo data.csv (modo texto)\n");
         printf("2. Cargar los datos de los empleados desde el archivo data.csv (modo binario)\n");

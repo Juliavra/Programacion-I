@@ -82,19 +82,25 @@
 
 1533133022 c:\utn\c\tp 3\cascara_tp3\tp3\win_32\controller.h
 
-1541601866 source:c:\utn\c\tp 3\cascara_tp3\tp3\tp3\controller.c
+1542552984 source:c:\utn\c\tp 3\cascara_tp3\tp3\tp3\controller.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
+	"utn.h"
 
 1533133022 c:\utn\c\tp 3\cascara_tp3\tp3\tp3\linkedlist.h
 
-1533133022 c:\utn\c\tp 3\cascara_tp3\tp3\tp3\employee.h
+1542285727 c:\utn\c\tp 3\cascara_tp3\tp3\tp3\employee.h
 
-1533133022 source:c:\utn\c\tp 3\cascara_tp3\tp3\tp3\employee.c
+1542285403 source:c:\utn\c\tp 3\cascara_tp3\tp3\tp3\employee.c
+	"Employee.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
 
-1541683006 source:c:\utn\c\tp 3\cascara_tp3\tp3\tp3\main.c
+1542501922 source:c:\utn\c\tp 3\cascara_tp3\tp3\tp3\main.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -103,11 +109,19 @@
 	"Controller.h"
 	"Employee.h"
 
-1533133022 c:\utn\c\tp 3\cascara_tp3\tp3\tp3\controller.h
+1542553106 c:\utn\c\tp 3\cascara_tp3\tp3\tp3\controller.h
 
-1533133022 source:c:\utn\c\tp 3\cascara_tp3\tp3\tp3\parser.c
+1542286038 source:c:\utn\c\tp 3\cascara_tp3\tp3\tp3\parser.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
+
+1542546270 source:c:\utn\c\tp 3\cascara_tp3\tp3\tp3\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+
+1542553086 c:\utn\c\tp 3\cascara_tp3\tp3\tp3\utn.h
 
