@@ -25,4 +25,9 @@ int employee_gethoursWorked(Employee* this,int* hoursWorked);
 int employee_setsalary(Employee* this,int salary);
 int employee_getsalary(Employee* this,int* salary);
 
+
+int enterName (char *name);
+int enterHoursWorked (char *hoursWorked);
+int enterSalary(char *salary);
+
 #endif // employee_H_INCLUDED

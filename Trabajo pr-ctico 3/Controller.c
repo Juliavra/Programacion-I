@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "LinkedList.h"
 #include "Employee.h"
+#include "parser.h"
+#include "controller.h"
 #include "utn.h"
 
 
@@ -53,79 +55,35 @@ int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
  */
 int controller_addEmployee(LinkedList* pArrayListEmployee)
 {
-    int rtn=-1, r, indexIs;
-    Employee* pEmployee=NULL;
-    Employee* auxEmployee=employee_new();
+    int rtn=-1, indexIs;
+    ///  Employee* pEmployee=NULL;
+  ///  Employee* auxEmployee=employee_new();
     char name [50], id [5], hoursWorked [4], salary [10];
     system ("cls");
     printf("\n\t\t\t ALTA DE EMPLEADO\n\n");
     do
     {
-        fflush(stdin);
-        printf("Ingrese el Id: ");
-        fgets (id, 5, stdin);
-        removeLineFeed(id);
-        r=numbersOnly(id);
-        if (r!=1)
-        {
-            printf("Numero incorrecto");
-        }
+        ///EL ID DEBE SER AUTOGENERADO
+///        fflush(stdin);
+   ///     printf("Ingrese el Id: ");
+      ///  fgets (id, 5, stdin);
+    ///    removeLineFeed(id);
+     ////   r=numbersOnly(id);
+///        if (r!=1)
+ ///       {
+  ///          printf("Numero incorrecto");
+   ////     }
 
         indexIs=controller_findEmployee(pArrayListEmployee, atoi(id));
     }
     while (indexIs!=-1);
 
-    do
-    {
-        fflush(stdin);
-        printf("Ingrese el nombre: ");
-        fgets (name, 50, stdin);
-        removeLineFeed(name);
-        r=lettersOnly(name);
-        chanceCase(name);
-        if (r==0)
-        {
-            printf("Nombre incorrecto");
-        }
-    }
-    while(r==0);
-    printf("name:%s", name);
-
-    do
-    {
-        fflush(stdin);
-        printf("Ingrese las horas trabajadas: ");
-        fgets (hoursWorked , 4, stdin);
-        removeLineFeed(hoursWorked);
-        r=numbersOnly(hoursWorked );
-        if (r==0)
-        {
-            printf("horas incorrecto");
-        }
-    }
-    while(r==0);
-    printf("hoursWorked :%s", hoursWorked);
-
-    do
-    {
-        fflush(stdin);
-        printf("Ingrese el salario: ");
-        fgets (salary , 10, stdin);
-        printf("salario;%s", salary);
-        removeLineFeed(salary);
-        r=numbersOnlyFloat(salary);
-        if (r==0)
-        {
-            printf("salarioincorrecto");
-        }
-    }
-    while(r==0);
-
-
-
-    printf("CONTROLLER salary :%s", salary);
-
-
+ enterName (name);
+ ///DEBE TOMAR UNA ACCION SI EL NOMBRE ESTA MAL INGRESADO
+ enterHoursWorked (hoursWorked);
+///DEBE TOMAR UNA ACCION SI EL NOMBRE ESTA MAL INGRESADO
+ enterSalary(salary);
+///    printf("CONTROLLER salary :%s", salary);
 
     return rtn;
 }

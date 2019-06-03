@@ -125,3 +125,52 @@
 
 1542553086 c:\utn\c\tp 3\cascara_tp3\tp3\tp3\utn.h
 
+1559574683 source:d:\avramidesj\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"controller.h"
+	"utn.h"
+
+1557522883 d:\avramidesj\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\linkedlist.h
+
+1559574656 d:\avramidesj\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\employee.h
+
+1559572913 d:\avramidesj\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\utn.h
+
+1559574565 source:d:\avramidesj\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\employee.c
+	"Employee.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"utn.h"
+
+1559570747 source:d:\avramidesj\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1557522883 d:\avramidesj\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\controller.h
+
+1557522883 source:d:\avramidesj\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1559572914 source:d:\avramidesj\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	<time.h>
+
+1557522883 d:\avramidesj\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\parser.h
+

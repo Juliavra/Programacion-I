@@ -30,8 +30,6 @@ int main()
 
     LinkedList* listaEmpleados = ll_newLinkedList();
 
-
-
     do
     {
         mainMenuSelection=mainMenu();
@@ -51,7 +49,7 @@ int main()
         }
 
         case 2:
-        {printf("opt %d", mainMenuSelection);
+        {///printf("opt %d", mainMenuSelection);
             controller_loadFromBinary("data.bin",listaEmpleados);
             break;
         }
@@ -61,23 +59,23 @@ int main()
             break;
         }
         case 4:
-        {printf("opt %d", mainMenuSelection);
+        {///printf("opt %d", mainMenuSelection);
             controller_editEmployee(listaEmpleados);
             break;
         }
         case 5:
-        {printf("opt %d", mainMenuSelection);
+        {///printf("opt %d", mainMenuSelection);
             controller_removeEmployee(listaEmpleados);
             break;
         }
         case 6:
-        {printf("opt %d", mainMenuSelection);
+        {///printf("opt %d", mainMenuSelection);
             ///system("cls");
             controller_ListEmployee(listaEmpleados);
             break;
         }
         case 7:
-        {printf("opt %d", mainMenuSelection);
+        {///printf("opt %d", mainMenuSelection);
             controller_sortEmployee(listaEmpleados);
             break;
         }
@@ -92,8 +90,8 @@ int main()
             break;
         }
         case 10:
-        {printf("opt %d", mainMenuSelection);
-            printf("Ud Eligio Salir");
+        {//printf("opt %d", mainMenuSelection);
+            printf("\n\nUd Eligio Salir\n\n");
             system("pause");
             break;
         }
