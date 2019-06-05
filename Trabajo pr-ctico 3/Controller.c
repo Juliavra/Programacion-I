@@ -56,34 +56,20 @@ int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
 int controller_addEmployee(LinkedList* pArrayListEmployee)
 {
     int rtn=-1, indexIs;
-    ///  Employee* pEmployee=NULL;
-  ///  Employee* auxEmployee=employee_new();
+    Employee* pEmployee=NULL;
     char name [50], id [5], hoursWorked [4], salary [10];
     system ("cls");
     printf("\n\t\t\t ALTA DE EMPLEADO\n\n");
-    do
-    {
-        ///EL ID DEBE SER AUTOGENERADO
-///        fflush(stdin);
-   ///     printf("Ingrese el Id: ");
-      ///  fgets (id, 5, stdin);
-    ///    removeLineFeed(id);
-     ////   r=numbersOnly(id);
-///        if (r!=1)
- ///       {
-  ///          printf("Numero incorrecto");
-   ////     }
-
-        indexIs=controller_findEmployee(pArrayListEmployee, atoi(id));
-    }
-    while (indexIs!=-1);
-
- enterName (name);
- ///DEBE TOMAR UNA ACCION SI EL NOMBRE ESTA MAL INGRESADO
- enterHoursWorked (hoursWorked);
+    ///EL ID DEBE SER AUTOGENERADO
+    enterId (id);
+///        indexIs=controller_findEmployee(pArrayListEmployee, atoi(id));
+    enterName (name);
 ///DEBE TOMAR UNA ACCION SI EL NOMBRE ESTA MAL INGRESADO
- enterSalary(salary);
-///    printf("CONTROLLER salary :%s", salary);
+    enterHoursWorked (hoursWorked);
+///DEBE TOMAR UNA ACCION SI EL NOMBRE ESTA MAL INGRESADO
+    enterSalary(salary);
+    pEmployee=employee_newParametros(id,name,hoursWorked,salary);
+    ll_add( pArrayListEmployee, pEmployee);
 
     return rtn;
 }
@@ -98,9 +84,57 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_editEmployee(LinkedList* pArrayListEmployee)
 {
+    int rtn=-1, id=-1, indexIs=-1, choice=-1;
+    char name[30], hoursWorked [5], salary [10];
+    Node *EmployeeData=NULL;
+    void *pElement=NULL;
+
+    if (pArrayListEmployee!=NULL)
+    {
+        controller_ListEmployee(pArrayListEmployee);
+
+        id=getInt("\nIngrese el Id del registro a modificar: ");
+        indexIs=controller_findEmployee(pArrayListEmployee, id);
+        controller_ListsSingleEmployee(pArrayListEmployee, indexIs);
+///printf("AAAAAAAACCCCCCCCCCCCCCCCCCAAAAAAAAAAAAAA"); system("pause");
+        choice=getInt("\nQue desea modificar?:  1-Nombre   2Hs Trabajadas  3-Salario");
+
+        switch (choice)
+        {
+        case 1:
+        {
+            enterName(name);
+             EmployeeData=test_getNode(pArrayListEmployee, indexIs);
+             pElement=EmployeeData->pElement;
+            employee_setname(pElement,name);
+            break;
+        }
+        case 2:
+        {
+            enterHoursWorked(hoursWorked);
+            break;
+        }
+        case 3:
+        {
+            enterSalary(salary);
+            break;
+        }
+        default:
+        {
+            break;
+        }
+        }
 
 
-    return 1;
+        rtn=1;
+    }
+    else
+    {
+        printf("LA LINK LIST ESTA VACIA");
+
+
+    }
+    return rtn;
 }
 
 /** \brief Baja de empleado
@@ -124,17 +158,41 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_ListEmployee(LinkedList* pArrayListEmployee)
 {
-    Employee *pEmpleado;
+    Employee *pEmpleado=employee_new();
     int i, rtn = 1;
     system("cls");
+    printf(" ID  Nombre Hs Trabajadas   Salario\n",pEmpleado->id,pEmpleado->name,pEmpleado->hoursWorked,pEmpleado->salary);
+
     for (i=0; i < ll_len(pArrayListEmployee); i++)
     {
         pEmpleado = ll_get(pArrayListEmployee, i);
-        printf("%5d %20s %3d %6.2f\n",pEmpleado->id,pEmpleado->name,pEmpleado->hoursWorked,pEmpleado->salary);
+        printf("%d %20s %3d %6.2f\n",pEmpleado->id,pEmpleado->name,pEmpleado->hoursWorked,pEmpleado->salary);
     }
     printf("\n");
     return rtn;
-}/**< FINALIZADO */
+}
+
+int controller_ListsSingleEmployee(LinkedList* pArrayListEmployee, int id)
+{
+    Employee *pEmpleado;
+    int rtn = 1;
+    system("cls");
+    pEmpleado = ll_get(pArrayListEmployee, id);
+    printf(" ID  Nombre Hs Trabajadas   Salario\n",pEmpleado->id,pEmpleado->name,pEmpleado->hoursWorked,pEmpleado->salary);
+    printf(" %d %s %d %f\n",pEmpleado->id,pEmpleado->name,pEmpleado->hoursWorked,pEmpleado->salary);
+
+//   printf("%d %20s %3d %6.2f\n",pEmpleado->id,pEmpleado->name,pEmpleado->hoursWorked,pEmpleado->salary);
+    printf("\n");
+    return rtn;
+}
+
+
+
+
+
+
+
+
 
 /** \brief Ordenar empleados
  *

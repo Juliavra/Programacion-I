@@ -26,6 +26,7 @@ int employee_setsalary(Employee* this,int salary);
 int employee_getsalary(Employee* this,int* salary);
 
 
+int enterId (char *id);
 int enterName (char *name);
 int enterHoursWorked (char *hoursWorked);
 int enterSalary(char *salary);

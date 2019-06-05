@@ -59,7 +59,7 @@ int main()
             break;
         }
         case 4:
-        {///printf("opt %d", mainMenuSelection);
+        {///printf("opt %d", mainMenuSelection); system("pause");
             controller_editEmployee(listaEmpleados);
             break;
         }
@@ -153,7 +153,7 @@ int mainMenu (void)
         printf("7. Ordenar empleados\n");
         printf("8. Guardar los datos de los empleados en el archivo data.csv (modo texto)\n");
         printf("9. Guardar los datos de los empleados en el archivo data.csv (modo binario)\n");
-        printf("10. Salir\n\n");
+        printf("S. Salir\n\n");
         printf("Que es lo que desea hacer? ");
 
         menuChoice= getche();

@@ -21,7 +21,7 @@ Employee *employee_new()
 
 
 Employee* employee_newParametros(char* id,char* name,char* hoursWorked,char* salary)
-{
+{///DEBERIA CHEQUEARSE Q LOS DATOS SEAN CORRECTOS CON SET!!!!!!
     Employee* pEmployee = employee_new();
     if(pEmployee != NULL)
     {
@@ -121,6 +121,22 @@ int employee_getsalary(Employee* this,int* salary)
     return rtn;
 }
 
+int enterId (char *id)
+{
+    int rtn=1, r=0;
+    getString("Ingrese el Id: ", id);
+    r=esNumerico(id);
+
+    if (r==0)
+    {
+        printf("Nombre incorrecto\n");
+        rtn=0;
+    }
+    printf("\n FOO ENTERID ID:%s\n", id);
+
+    return rtn;
+}
+
 int enterName (char *name)
 {
     int rtn=1, r=0;
@@ -148,10 +164,9 @@ int enterHoursWorked (char *hoursWorked)
             printf("horas incorrecto");
                     rtn=0;
         }
-    printf("FOO ENTERHOURS hoursWorked :%s", hoursWorked);
+    printf("\nFOO ENTERHOURS hoursWorked :%s\n", hoursWorked);
     return rtn;
 }
-
 
 int enterSalary(char *salary)
 {
@@ -163,7 +178,7 @@ int enterSalary(char *salary)
             printf("salario incorrecto");
                     rtn=0;
         }
-    printf("FOO ENTERSALARY salary:%s", salary);
+    printf("\nFOO ENTERSALARY salary:%s\n", salary);
     return rtn;
 }
 

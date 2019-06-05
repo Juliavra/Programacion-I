@@ -10,3 +10,5 @@ int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee);
 
 
 int controller_findEmployee(LinkedList* pArrayListEmployee, int id);
+
+int controller_ListsSingleEmployee(LinkedList* pArrayListEmployee, int id);
