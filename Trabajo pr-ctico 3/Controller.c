@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "LinkedList.h"
 #include "Employee.h"
 #include "parser.h"
@@ -43,7 +44,22 @@ int controller_loadFromText(char* path, LinkedList* pArrayListEmployee)
  */
 int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
 {
-    return 1;
+    FILE* fp = fopen(path, "rb");
+    int rtn= 0;
+    if(fp != NULL)
+    {
+        parser_EmployeeFromBinary(fp, pArrayListEmployee);
+        rtn = 1;
+    }
+    else
+    {
+        printf("\n Archivo binario no cargado\n");
+        fclose(fp);
+        exit(EXIT_FAILURE);
+    }
+    fclose(fp);
+
+    return rtn;
 }
 
 /** \brief Alta de empleados
@@ -53,26 +69,59 @@ int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
  * \return int
  *
  */
+
 int controller_addEmployee(LinkedList* pArrayListEmployee)
 {
-    int rtn=-1, indexIs;
+    int rtn=-1, flagId = 0, isEmpty;
     Employee* pEmployee=NULL;
     char name [50], id [5], hoursWorked [4], salary [10];
+    int newID=-1, rName=-1, rId=-1, rHoursWorked=-1, rSalary=-1, addedOk=-1, r;
     system ("cls");
     printf("\n\t\t\t ALTA DE EMPLEADO\n\n");
-    ///EL ID DEBE SER AUTOGENERADO
-    enterId (id);
-///        indexIs=controller_findEmployee(pArrayListEmployee, atoi(id));
-    enterName (name);
-///DEBE TOMAR UNA ACCION SI EL NOMBRE ESTA MAL INGRESADO
-    enterHoursWorked (hoursWorked);
-///DEBE TOMAR UNA ACCION SI EL NOMBRE ESTA MAL INGRESADO
-    enterSalary(salary);
-    pEmployee=employee_newParametros(id,name,hoursWorked,salary);
-    ll_add( pArrayListEmployee, pEmployee);
 
+    do
+    {
+        newID=generates_Next_Id_Employee();
+        isEmpty=controller_findEmployee(pArrayListEmployee, newID);
+        if (isEmpty==-1)
+        {
+            itoa(newID, id, 10);
+            ///printf ("%d if isEmpty", isEmpty);
+        }
+    }
+    while (isEmpty!=-1);
+
+    printf("\nID: %s\n\n", id);
+    while (rName!=1)
+    {
+        rName=enterName (name);
+    }
+    while(rHoursWorked!=1)
+    {
+        rHoursWorked=enterHoursWorked (hoursWorked);
+    }
+    while(rSalary!=1)
+    {
+        rSalary=enterSalary(salary);
+    }
+    ///  printf("\nNEWPARAM ID: %s\n\n", id);
+    pEmployee=employee_newParametros(id,name,hoursWorked,salary);
+
+    if (pEmployee!=NULL)
+    {
+        addedOk=ll_add( pArrayListEmployee, pEmployee);
+        if (addedOk!=0)
+        {
+            printf ("\n\nNo se ha podido agregar un registro con exito\n\n");
+        }
+        else
+        {
+            printf ("\n\nSe ha agregado un registro con exito\n\n");
+        }
+    }
     return rtn;
 }
+
 ///*************************************************************************************************************
 ///*************************************************************************************************************
 /** \brief Modificar datos de empleado
@@ -82,57 +131,76 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
  * \return int
  *
  */
+
+///HACER Q PREGUNTE MSI QUIERE MODIFICAR MAS DEL MISMO REGISTRO O ALGUN OTRO REGISTRO
+
+
 int controller_editEmployee(LinkedList* pArrayListEmployee)
 {
     int rtn=-1, id=-1, indexIs=-1, choice=-1;
     char name[30], hoursWorked [5], salary [10];
+    int rName=-1, rHoursWorked=-1, rSalary=-1;
     Node *EmployeeData=NULL;
     void *pElement=NULL;
+    pElement=employee_new();
 
     if (pArrayListEmployee!=NULL)
     {
         controller_ListEmployee(pArrayListEmployee);
 
-        id=getInt("\nIngrese el Id del registro a modificar: ");
+        ///      id=getInt("\nIngrese el Id del registro a modificar: ");
+        id=getValidInt("\nIngrese el Id del registro a modificar: ","\nIngreso un Id inexistente ", 0, 100000);
         indexIs=controller_findEmployee(pArrayListEmployee, id);
-        controller_ListsSingleEmployee(pArrayListEmployee, indexIs);
-///printf("AAAAAAAACCCCCCCCCCCCCCCCCCAAAAAAAAAAAAAA"); system("pause");
-        choice=getInt("\nQue desea modificar?:  1-Nombre   2Hs Trabajadas  3-Salario");
-
-        switch (choice)
+        if (indexIs!=-1)
         {
-        case 1:
+            controller_ListsSingleEmployee(pArrayListEmployee, indexIs);
+            choice=getInt("\nQue desea modificar?:  1-Nombre   2-Hs Trabajadas  3-Salario");
+            EmployeeData=test_getNode(pArrayListEmployee, indexIs);
+            pElement=EmployeeData->pElement;
+            rtn=1;
+            switch (choice)
+            {
+            case 1:
+            {
+                while (rName!=1)
+                {
+                    rName=enterName (name);
+                }
+                employee_setname(pElement,name);
+                break;
+            }
+            case 2:
+            {
+                while(rHoursWorked!=1)
+                {
+                    rHoursWorked=enterHoursWorked (hoursWorked);
+                }
+                employee_sethoursWorked(pElement, atoi(hoursWorked));
+                break;
+            }
+            case 3:
+            {
+                while(rSalary!=1)
+                {
+                    rSalary=enterSalary(salary);
+                }
+                employee_setsalary(pElement, atof(salary));
+            }
+            default:
+            {
+                printf("\nOpcion incorrecta\n");
+                break;
+            }
+            }
+        }
+        else
         {
-            enterName(name);
-             EmployeeData=test_getNode(pArrayListEmployee, indexIs);
-             pElement=EmployeeData->pElement;
-            employee_setname(pElement,name);
-            break;
+            printf("\n\nSelecciono un ID Inexistente\n\n");
         }
-        case 2:
-        {
-            enterHoursWorked(hoursWorked);
-            break;
-        }
-        case 3:
-        {
-            enterSalary(salary);
-            break;
-        }
-        default:
-        {
-            break;
-        }
-        }
-
-
-        rtn=1;
     }
     else
     {
-        printf("LA LINK LIST ESTA VACIA");
-
-
+        printf("La lista esta vacia");
     }
     return rtn;
 }
@@ -146,7 +214,47 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_removeEmployee(LinkedList* pArrayListEmployee)
 {
-    return 1;
+    int rtn=-1, id=-1, indexIs=-1, choice=-1, removeOk=-1;
+
+    if (pArrayListEmployee!=NULL)
+    {
+        controller_ListEmployee(pArrayListEmployee);
+        id=getValidInt("\nIngrese el Id del registro a borrar","\nIngreso un Id inexistente ", 1, 100000);
+        indexIs=controller_findEmployee(pArrayListEmployee, id);
+
+        if (indexIs!=-1)
+        {
+        controller_ListsSingleEmployee(pArrayListEmployee, indexIs);
+        choice=getInt("\nEsta seguro que desea borrar? \t\t 1-Si    2-No\n\n? ");
+        switch (choice)
+        {
+        case 1:
+        {
+            removeOk=ll_remove( pArrayListEmployee, indexIs);
+            if (removeOk==0)
+            {
+                printf("\n\n\n\nSe ha borrado un archivo correctamente\n\n\n\n");
+            }
+            break;
+        }
+        case 2:
+        {
+            printf("\n\n\n\nNo se ha borrado ningun archivo\n\n\n\n");
+            break;
+        }
+        default:
+        {
+            break;
+        }
+        }
+    }
+    else
+    {
+            printf("\n\nNO existe el ID\n\n");
+    }
+
+    }
+    return rtn;
 }
 
 /** \brief Listar empleados
@@ -159,14 +267,13 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
 int controller_ListEmployee(LinkedList* pArrayListEmployee)
 {
     Employee *pEmpleado=employee_new();
-    int i, rtn = 1;
+    int rtn = 1, i=-1;
     system("cls");
-    printf(" ID  Nombre Hs Trabajadas   Salario\n",pEmpleado->id,pEmpleado->name,pEmpleado->hoursWorked,pEmpleado->salary);
-
+    tags();
     for (i=0; i < ll_len(pArrayListEmployee); i++)
     {
         pEmpleado = ll_get(pArrayListEmployee, i);
-        printf("%d %20s %3d %6.2f\n",pEmpleado->id,pEmpleado->name,pEmpleado->hoursWorked,pEmpleado->salary);
+        printf("%3d %13s %12d %19.2f\n",pEmpleado->id,pEmpleado->name,pEmpleado->hoursWorked,pEmpleado->salary);
     }
     printf("\n");
     return rtn;
@@ -178,21 +285,11 @@ int controller_ListsSingleEmployee(LinkedList* pArrayListEmployee, int id)
     int rtn = 1;
     system("cls");
     pEmpleado = ll_get(pArrayListEmployee, id);
-    printf(" ID  Nombre Hs Trabajadas   Salario\n",pEmpleado->id,pEmpleado->name,pEmpleado->hoursWorked,pEmpleado->salary);
-    printf(" %d %s %d %f\n",pEmpleado->id,pEmpleado->name,pEmpleado->hoursWorked,pEmpleado->salary);
-
-//   printf("%d %20s %3d %6.2f\n",pEmpleado->id,pEmpleado->name,pEmpleado->hoursWorked,pEmpleado->salary);
+    tags();
+    printf("%3d %13s %12d %19.2f\n",pEmpleado->id,pEmpleado->name,pEmpleado->hoursWorked,pEmpleado->salary);
     printf("\n");
     return rtn;
 }
-
-
-
-
-
-
-
-
 
 /** \brief Ordenar empleados
  *
@@ -203,8 +300,62 @@ int controller_ListsSingleEmployee(LinkedList* pArrayListEmployee, int id)
  */
 int controller_sortEmployee(LinkedList* pArrayListEmployee)
 {
-    return 1;
+    int rtn = -1;
+    int option, order=0;
+
+    printf("\n\nPor que campo desea ordenar?\n\n");
+    printf("1-Id\n");
+    printf("2-Nombre\n");
+    printf("3-Horas trabajadas\n");
+    printf("4-Salario\n");
+    scanf("%d", &option);
+
+    printf("\n\nDesea hacerlo en forma: 1-Ascendente    2-Descendente");
+    scanf("%d", &order);
+
+    switch (order)
+    {
+    case 1:
+    {
+        order=0;
+        break;
+    }
+    case 2:
+    {
+        order=1;
+        break;
+    }
+    default:
+    {
+        break;
+    }
+    }
+
+    switch(option)
+    {
+    case 1:
+        ll_sort(pArrayListEmployee, employeeSortById, order);
+        printf("Ordenamiento por id realizado!\n");
+        break;
+    case 2:
+        ll_sort(pArrayListEmployee, employeeSortByName, order);
+        printf("Ordenamiento por nombre realizado!\n");
+        break;
+    case 3:
+        ll_sort(pArrayListEmployee, employeeSortByHours, order);
+        printf("Ordenamiento por horas trabajadas realizado!\n");
+        break;
+    case 4:
+        ll_sort(pArrayListEmployee, employeeSortBySalary, order);
+        printf("Ordenamiento por salario realizado!\n");
+        break;
+    default:
+        printf("Opcion incorrecta\n");
+        break;
+    }
+    return rtn;
 }
+
 
 /** \brief Guarda los datos de los empleados en el archivo data.csv (modo texto).
  *
@@ -215,7 +366,28 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_saveAsText(char* path, LinkedList* pArrayListEmployee)
 {
-    return 1;
+    int rtn = -1;
+    Employee* this;
+    FILE* csvFile = fopen(path, "w");
+
+    if(csvFile==NULL)
+    {
+        printf("Error al guardar\n");
+        return rtn;
+    }
+    fprintf(csvFile, "id,nombre,horasTrabajadas,sueldo\n");
+    if(pArrayListEmployee!=NULL)
+    {
+        for(int i=0; i<ll_len(pArrayListEmployee); i++)
+        {
+            this = (Employee*)ll_get(pArrayListEmployee, i);
+            fprintf(csvFile, "%d,%s,%d,%f\n", this->id, this->name, this->hoursWorked, this->salary);
+        }
+        printf("\n\n\n%d Empleados guardados en modo texto OK!\n", ll_len(pArrayListEmployee));
+        rtn = 1;
+    }
+    fclose(csvFile);
+    return rtn;
 }
 
 /** \brief Guarda los datos de los empleados en el archivo data.csv (modo binario).
@@ -227,11 +399,32 @@ int controller_saveAsText(char* path, LinkedList* pArrayListEmployee)
  */
 int controller_saveAsBinary(char* path, LinkedList* pArrayListEmployee)
 {
-    return 1;
+    int rtn = -1;
+    int len = ll_len(pArrayListEmployee);
+    Employee* this;
+    FILE* list = fopen(path, "wb");
+
+    if(list==NULL)
+    {
+        printf("Error para guardar. No se pudo abrir archivo\n");
+        return rtn;
+    }
+    if(pArrayListEmployee!=NULL)
+    {
+        for(int i=0; i<len; i++)
+        {
+            this = (Employee*)ll_get(pArrayListEmployee, i);
+            fwrite(this,sizeof(Employee),1,list);
+        }
+        printf("\n\nArchivo guardado conteniendo %d empleados \n", ll_len(pArrayListEmployee));
+        rtn = 1;
+    }
+    fclose(list);
+    return rtn;
 }
 ///**************************************************************************************************************
 ///**************************************************************************************************************
-int controller_findEmployee(LinkedList* pArrayListEmployee, int id)
+int controller_findEmployee(LinkedList* pArrayListEmployee, int id) ///-1 NO LO ENCONTRO
 {
     Employee* pEmployee;
     int i, rtn = -1;
@@ -246,3 +439,6 @@ int controller_findEmployee(LinkedList* pArrayListEmployee, int id)
     }
     return rtn;
 }
+///---------------------------------------------------------------------------------------------------
+///---------------------------------------------------------------------------------------------------
+

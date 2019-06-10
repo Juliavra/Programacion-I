@@ -29,6 +29,7 @@ int numbersOnly (char auxiliarInput[]);
 float numbersOnlyFloat (char auxiliarInput[]);
 int lettersOnly (char auxiliarInput[]);
 void changeCase (char auxiliarInput[]);
+void tags (void);
 ///----------------------------------------
 
 

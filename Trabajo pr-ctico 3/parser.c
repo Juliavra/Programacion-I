@@ -34,7 +34,7 @@ int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
             }
     }
 
-    printf("\n\n%d empleados cargados OK!\n", i);
+    printf("\n\n%d empleados cargados en modo texto OK!\n", i);
 
     return i;
 }
@@ -49,6 +49,31 @@ int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
  */
 int parser_EmployeeFromBinary(FILE* pFile , LinkedList* pArrayListEmployee)
 {
+    Employee employee;
+    int cant, i = 0;
 
-    return 1;
+    cant = fread(&employee, sizeof(Employee), 1, pFile);
+    while(!feof(pFile)){
+        Employee* pEmployee = employee_new();
+        employee_setId(pEmployee,employee.id);
+        employee_sethoursWorked(pEmployee,employee.hoursWorked);
+        employee_setname(pEmployee,employee.name);
+        employee_setsalary(pEmployee,employee.salary);
+    if(cant == 1){
+            ll_add(pArrayListEmployee, pEmployee);
+            fread(&employee, sizeof(Employee), 1, pFile);
+            i++;
+    }else{
+            if(!feof(pFile)){
+                printf("\n!!! - Se ha producido un error llegando al final del archivo.");
+                system("pause");
+                break;
+            }else{
+                printf("\n\n\nFinal del archivo. Empleados leidos %d\n\n ", i);
+            }
+        }
+    }
+    printf("\n\n\n%d Empleados cargados correctamente en modo binario\n", ll_len(pArrayListEmployee));
+    fclose(pFile);
+    return i;
 }

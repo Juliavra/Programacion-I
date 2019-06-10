@@ -174,26 +174,27 @@
 
 1557522883 d:\avramidesj\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\parser.h
 
-1559739117 source:c:\utn\tps labo 2do intento\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\controller.c
+1560040975 source:c:\utn\tps labo 2do intento\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\controller.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
 	"LinkedList.h"
 	"Employee.h"
 	"parser.h"
 	"controller.h"
 	"utn.h"
 
-1559574849 c:\utn\tps labo 2do intento\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\linkedlist.h
+1560033938 c:\utn\tps labo 2do intento\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\linkedlist.h
 
-1559735903 c:\utn\tps labo 2do intento\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\employee.h
+1560015537 c:\utn\tps labo 2do intento\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\employee.h
 
 1559574849 c:\utn\tps labo 2do intento\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\parser.h
 
-1559736666 c:\utn\tps labo 2do intento\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\controller.h
+1560012849 c:\utn\tps labo 2do intento\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\controller.h
 
-1559574849 c:\utn\tps labo 2do intento\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\utn.h
+1559826324 c:\utn\tps labo 2do intento\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\utn.h
 
-1559732462 source:c:\utn\tps labo 2do intento\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\employee.c
+1560031808 source:c:\utn\tps labo 2do intento\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\employee.c
 	"Employee.h"
 	<stdio.h>
 	<stdlib.h>
@@ -201,7 +202,7 @@
 	<string.h>
 	"utn.h"
 
-1559733852 source:c:\utn\tps labo 2do intento\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\main.c
+1560043529 source:c:\utn\tps labo 2do intento\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\main.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -210,13 +211,65 @@
 	"Controller.h"
 	"Employee.h"
 
-1559574849 source:c:\utn\tps labo 2do intento\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\parser.c
+1560040707 source:c:\utn\tps labo 2do intento\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\parser.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
 	"Employee.h"
 
-1559574849 source:c:\utn\tps labo 2do intento\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\utn.c
+1559825934 source:c:\utn\tps labo 2do intento\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	<time.h>
+
+1560042330 source:c:\utn\tps labo 2do intento\programacion-i-master\programacion-i-master\trabajo pr-ctico 3\codigovario.c
+
+1560040975 source:d:\avramidesj\trabajo pr-ctico 3\trabajo pr-ctico 3\controller.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"controller.h"
+	"utn.h"
+
+1560033938 d:\avramidesj\trabajo pr-ctico 3\trabajo pr-ctico 3\linkedlist.h
+
+1560015537 d:\avramidesj\trabajo pr-ctico 3\trabajo pr-ctico 3\employee.h
+
+1559574849 d:\avramidesj\trabajo pr-ctico 3\trabajo pr-ctico 3\parser.h
+
+1560012849 d:\avramidesj\trabajo pr-ctico 3\trabajo pr-ctico 3\controller.h
+
+1559826324 d:\avramidesj\trabajo pr-ctico 3\trabajo pr-ctico 3\utn.h
+
+1560031808 source:d:\avramidesj\trabajo pr-ctico 3\trabajo pr-ctico 3\employee.c
+	"Employee.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"utn.h"
+
+1560043529 source:d:\avramidesj\trabajo pr-ctico 3\trabajo pr-ctico 3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1560040707 source:d:\avramidesj\trabajo pr-ctico 3\trabajo pr-ctico 3\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1559825934 source:d:\avramidesj\trabajo pr-ctico 3\trabajo pr-ctico 3\utn.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>

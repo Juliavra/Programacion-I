@@ -26,122 +26,17 @@ int mainMenu (void);
 
 int main()
 {
-    int mainMenuSelection, isTxtLoaded=0, isBinLoaded=0;
-
+    ///int mainMenuSelection, isTxtLoaded=0, isBinLoaded=0;
+    int isTxtLoaded=0, isBinLoaded=0;
+    char mainMenuSelection;
     LinkedList* listaEmpleados = ll_newLinkedList();
 
     do
     {
-        mainMenuSelection=mainMenu();
+        /// system("cls");
+        // mainMenuSelection=mainMenu();
 
-        switch (mainMenuSelection)
-        {
-
-        case 1:
-        {
-            ///system("cls");
-            if (isTxtLoaded==0 && isBinLoaded!=1)
-            {
-                controller_loadFromText("data.csv",listaEmpleados);
-                system("pause");
-                break;
-            }
-        }
-
-        case 2:
-        {///printf("opt %d", mainMenuSelection);
-            controller_loadFromBinary("data.bin",listaEmpleados);
-            break;
-        }
-        case 3:
-        {
-            controller_addEmployee(listaEmpleados);
-            break;
-        }
-        case 4:
-        {///printf("opt %d", mainMenuSelection); system("pause");
-            controller_editEmployee(listaEmpleados);
-            break;
-        }
-        case 5:
-        {///printf("opt %d", mainMenuSelection);
-            controller_removeEmployee(listaEmpleados);
-            break;
-        }
-        case 6:
-        {///printf("opt %d", mainMenuSelection);
-            ///system("cls");
-            controller_ListEmployee(listaEmpleados);
-            break;
-        }
-        case 7:
-        {///printf("opt %d", mainMenuSelection);
-            controller_sortEmployee(listaEmpleados);
-            break;
-        }
-        case 8:
-        {printf("opt %d", mainMenuSelection);
-            controller_saveAsText("data.csv",listaEmpleados);
-            break;
-        }
-        case 9:
-        {printf("opt %d", mainMenuSelection);
-            controller_saveAsBinary("data.bin",listaEmpleados);
-            break;
-        }
-        case 10:
-        {//printf("opt %d", mainMenuSelection);
-            printf("\n\nUd Eligio Salir\n\n");
-            system("pause");
-            break;
-        }
-        }
-    }
-    while (mainMenuSelection!=10);
-
-    return 0;
-
-}
-///*******************************************************************************************************************************************************************
-///*******************************************************************************************************************************************************************
-///BORRAR LUEGO         BORRAR LUEGO       BORRAR LUEGO     BORRAR LUEGO     BORRAR LUEGO    BORRAR LUEGO       BORRAR LUEGO        BORRAR LUEGO
-
-/*
-int abreArchivo(void)
-{
-
-    char txtleido [50];
-    int longitud, cant;
-    FILE *parch;
-
-    if((parch=fopen("prueba.txt","rb"))==NULL)
-    {
-        printf("\nEl archivo no puede ser abierto");
-        exit (1);
-    }
-    else
-    {
-       fgets(txtleido, 20, parch);
-
-printf("\ntxtleido: %s\n", txtleido);
-
-        longitud=strlen (texto );
-        cant=fwrite ( texto , sizeof ( char ) , longitud , parch ); //Se escribe al archivo
-
-    }
-    fclose(parch);
-    return 0;
-}
-*/
-
-int mainMenu (void)
-{
-    char menuChoice;
-    int usersChoice;
-
-    do
-    {
-       /// system("cls");
+                 system("cls");
         printf("\t\t\t\tMENU PRINCIPAL\tJULIAN\n\n\n");
 
         printf("1. Cargar los datos de los empleados desde el archivo data.csv (modo texto)\n");
@@ -156,75 +51,255 @@ int mainMenu (void)
         printf("S. Salir\n\n");
         printf("Que es lo que desea hacer? ");
 
-        menuChoice= getche();
 
-        switch (menuChoice)
+        mainMenuSelection=getche();
+
+        switch (mainMenuSelection)
         {
-
         case '1':
         {
-            usersChoice=1;
+
+            if (isTxtLoaded==0 && isBinLoaded!=1)
+            {
+                controller_loadFromText("data.csv",listaEmpleados);
+                isTxtLoaded=1;
+            }
+            else
+            {
+                printf("\n\nYa se han cargado los datos anteriormente\n\n");
+            }
+            system("pause");
             break;
         }
-
         case '2':
         {
-            usersChoice=2;
+            if (isTxtLoaded!=1 && isBinLoaded==0)
+            {
+                controller_loadFromBinary("data.bin",listaEmpleados);
+                isBinLoaded=1;
+            }
+            else
+            {
+                printf("\n\nYa se han cargado los datos anteriormente\n\n");
+            }
+            system("pause");
             break;
         }
-
         case '3':
         {
-            usersChoice=3;
+            if(isTxtLoaded == 1 || isBinLoaded == 1)
+            {
+                controller_addEmployee(listaEmpleados);
+            }
+            else
+            {
+                printf("\n\nNo se han cargado datos aun. Debes cargar un archivo primero.\n\n\n\n");
+            }
+            system("pause");
             break;
         }
-
         case '4':
         {
-            usersChoice=4;
+            if(isTxtLoaded == 1 || isBinLoaded == 1)
+            {
+                controller_editEmployee(listaEmpleados);
+            }
+            else
+            {
+                printf("\n\nNo se han cargado datos aun. Debes cargar un archivo primero.\n\n\n\n");
+            }
+            system("pause");
             break;
         }
         case '5':
         {
-            usersChoice=5;
+            if(isTxtLoaded == 1 || isBinLoaded == 1)
+            {
+                controller_removeEmployee(listaEmpleados);
+            }
+            else
+            {
+                printf("\n\nNo se han cargado datos aun. Debes cargar un archivo primero.\n\n\n\n");
+            }
+            system("pause");
             break;
         }
         case '6':
         {
-            usersChoice=6;
+            if(isTxtLoaded == 1 || isBinLoaded == 1)
+            {
+                controller_ListEmployee(listaEmpleados);
+            }
+            else
+            {
+                printf("\n\nNo se han cargado datos aun. Debes cargar un archivo primero.\n\n\n\n");
+            }
+            system("pause");
             break;
         }
         case '7':
         {
-            usersChoice=7;
+            if(isTxtLoaded == 1 || isBinLoaded == 1)
+            {
+                controller_sortEmployee(listaEmpleados);
+            }
+            else
+            {
+                printf("\n\nNo se han cargado datos aun. Debes cargar un archivo primero.\n\n\n\n");
+            }
+            system("pause");
             break;
         }
         case '8':
         {
-            usersChoice=8;
+             if(isTxtLoaded == 1 || isBinLoaded == 1)
+             {
+                    controller_saveAsText("data.csv",listaEmpleados);
+             }
+             else
+            {
+                printf("\n\nNo se han cargado datos aun. Debes cargar un archivo primero.\n\n\n\n");
+            }
+
+            system("pause");
             break;
         }
         case '9':
         {
-            usersChoice=9;
+                         if(isTxtLoaded == 1 || isBinLoaded == 1)
+             {
+                    controller_saveAsBinary("data.bin",listaEmpleados);
+             }
+             else
+            {
+                printf("\n\nNo se han cargado datos aun. Debes cargar un archivo primero.\n\n\n\n");
+            }
+
+            system("pause");
+            break;
+        }
+        case 's':
+        {
+            printf("\n\nUd Eligio Salir\n\n");
+            system("pause");
             break;
         }
         case 'S':
         {
-            usersChoice=10;
+            printf("\n\nUd Eligio Salir\n\n");
+            system("pause");
             break;
         }
-        default :
+        default:
         {
             break;
         }
-
         }
-
     }
-    while (usersChoice<1 || usersChoice>10);
+    while (mainMenuSelection!='s' && mainMenuSelection!='S');
 
-    return usersChoice;
+    return 0;
+
 }
+///*******************************************************************************************************************************************************************
+///*******************************************************************************************************************************************************************
 
-///**************************************************************************************************
+//
+//int mainMenu (void)
+//{
+//    char menuChoice;
+//    int usersChoice;
+//
+//    do
+//    {
+//         system("cls");
+//        printf("\t\t\t\tMENU PRINCIPAL\tJULIAN\n\n\n");
+//
+//        printf("1. Cargar los datos de los empleados desde el archivo data.csv (modo texto)\n");
+//        printf("2. Cargar los datos de los empleados desde el archivo data.csv (modo binario)\n");
+//        printf("3. Alta de empleado\n");
+//        printf("4. Modificar datos de empleado\n");
+//        printf("5. Baja de empleado\n");
+//        printf("6. Listar empleados\n");
+//        printf("7. Ordenar empleados\n");
+//        printf("8. Guardar los datos de los empleados en el archivo data.csv (modo texto)\n");
+//        printf("9. Guardar los datos de los empleados en el archivo data.csv (modo binario)\n");
+//        printf("S. Salir\n\n");
+//        printf("Que es lo que desea hacer? ");
+//
+//        menuChoice= getche();
+//
+//        switch (menuChoice)
+//        {
+//
+//        case '1':
+//        {
+//            usersChoice=1;
+//            break;
+//        }
+//
+//        case '2':
+//        {
+//            usersChoice=2;
+//            break;
+//        }
+//
+//        case '3':
+//        {
+//            usersChoice=3;
+//            break;
+//        }
+//
+//        case '4':
+//        {
+//            usersChoice=4;
+//            break;
+//        }
+//        case '5':
+//        {
+//            usersChoice=5;
+//            break;
+//        }
+//        case '6':
+//        {
+//            usersChoice=6;
+//            break;
+//        }
+//        case '7':
+//        {
+//            usersChoice=7;
+//            break;
+//        }
+//        case '8':
+//        {
+//            usersChoice=8;
+//            break;
+//        }
+//        case '9':
+//        {
+//            usersChoice=9;
+//            break;
+//        }
+//        case 'S':
+//        {
+//            usersChoice=10;
+//            break;
+//        }
+//        case 's':
+//        {
+//            usersChoice=10;
+//            break;
+//        }
+//        default :
+//        {
+//            break;
+//        }
+//
+//        }
+//    }
+//    while (usersChoice<1 || usersChoice>10);
+//
+//    return usersChoice;
+//}
+//
+/////**************************************************************************************************

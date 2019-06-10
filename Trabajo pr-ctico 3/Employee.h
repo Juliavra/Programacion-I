@@ -25,10 +25,16 @@ int employee_gethoursWorked(Employee* this,int* hoursWorked);
 int employee_setsalary(Employee* this,int salary);
 int employee_getsalary(Employee* this,int* salary);
 
-
 int enterId (char *id);
 int enterName (char *name);
 int enterHoursWorked (char *hoursWorked);
 int enterSalary(char *salary);
 
+int employeeSortById(void* empleadoA, void* empleadoB);
+int employeeSortByName(void* empleadoA, void* empleadoB);
+int employeeSortByHours(void* empleadoA, void* empleadoB);
+int employeeSortBySalary(void* empleadoA, void* empleadoB);
+
+
+int generates_Next_Id_Employee();
 #endif // employee_H_INCLUDED

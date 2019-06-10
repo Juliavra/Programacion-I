@@ -80,10 +80,17 @@ int employee_getname(Employee* this,char* name)
 int employee_sethoursWorked(Employee* this, int hoursWorked)
 {
     int rtn = 0;
-    if (hoursWorked>= 0 && hoursWorked<500 && this != NULL)
+    if(this != NULL)
+    {
+    if (hoursWorked>= 0 && hoursWorked<500)
     {
         this->hoursWorked= hoursWorked;
         rtn = 1;
+    }
+    else
+    {
+        printf("\n\ningreso un dato erroneo\n\n");
+    }
     }
     return rtn;
 }
@@ -129,10 +136,10 @@ int enterId (char *id)
 
     if (r==0)
     {
-        printf("Nombre incorrecto\n");
+        printf("\n\nID incorrecto\n\n");
         rtn=0;
     }
-    printf("\n FOO ENTERID ID:%s\n", id);
+    ///printf("\n FOO ENTERID ID:%s\n", id);
 
     return rtn;
 }
@@ -140,19 +147,24 @@ int enterId (char *id)
 int enterName (char *name)
 {
     int rtn=1, r=0;
+
     getString("Ingrese el nombre: ", name);
     r=esSoloLetras(name);
 
     if (r==0)
     {
-        printf("Nombre incorrecto\n");
-        rtn=0;
+    printf("\n\nNombre incorrecto\n\n");
+    rtn=0;
     }
+    else
+    {
     changeCase(name);
-    printf("\n FOO ENTERNAME name:%s\n", name);
+    }
 
     return rtn;
 }
+
+
 
 int enterHoursWorked (char *hoursWorked)
 {
@@ -161,10 +173,10 @@ int enterHoursWorked (char *hoursWorked)
     r=esNumerico (hoursWorked);
         if (r==0)
         {
-            printf("horas incorrecto");
+            printf("\n\nCampo horas incorrecto\n\n");
                     rtn=0;
         }
-    printf("\nFOO ENTERHOURS hoursWorked :%s\n", hoursWorked);
+    ///printf("\nFOO ENTERHOURS hoursWorked :%s\n", hoursWorked);
     return rtn;
 }
 
@@ -175,11 +187,94 @@ int enterSalary(char *salary)
     r=esNumericoFlotante (salary);
         if (r==0)
         {
-            printf("salario incorrecto");
+            printf("\n\nsalario incorrecto\n\n");
                     rtn=0;
         }
-    printf("\nFOO ENTERSALARY salary:%s\n", salary);
+    ///printf("\nFOO ENTERSALARY salary:%s\n", salary);
     return rtn;
 }
 
+int employeeSortById(void* empleadoA, void* empleadoB){
+    int rtn= -1;
+    Employee* empA;
+    Employee* empB;
 
+    if(empleadoA !=NULL && empleadoB !=NULL){
+        empA = (Employee*) empleadoA;
+        empB = (Employee*) empleadoB;
+        if((empA->id)<(empB->id)){
+            rtn= 1 ;
+        }else if((empA->id)>(empB->id)){
+            rtn= -1 ;
+        }else if((empA->id)==(empB->id)){
+            rtn= 0;
+        }
+    }
+    return rtn;
+}
+
+int employeeSortByName(void* empleadoA, void* empleadoB){
+    int rtn= -1;
+    Employee* empA;
+    Employee* empB;
+
+    if(empleadoA !=NULL && empleadoB !=NULL){
+        empA = (Employee*) empleadoA;
+        empB = (Employee*) empleadoB;
+        rtn= strcmp(empB->name, empA->name);
+    }
+
+    return rtn;
+}
+
+int employeeSortByHours(void* empleadoA, void* empleadoB){
+    int rtn= -1;
+    Employee* empA;
+    Employee* empB;
+
+    if(empleadoA !=NULL && empleadoB !=NULL){
+        empA = (Employee*) empleadoA;
+        empB = (Employee*) empleadoB;
+                if((empA->hoursWorked)<(empB->hoursWorked)){
+            rtn= 1 ;
+        }else if((empA->hoursWorked)>(empB->hoursWorked)){
+            rtn= -1 ;
+        }else if((empA->hoursWorked)==(empB->hoursWorked)){
+            rtn= 0;
+        }
+    }
+    return rtn;
+}
+
+int employeeSortBySalary(void* empleadoA, void* empleadoB){
+    int rtn= -1;
+    Employee* empA;
+    Employee* empB;
+
+    if(empleadoA !=NULL && empleadoB !=NULL){
+        empA = (Employee*) empleadoA;
+        empB = (Employee*) empleadoB;
+        if((empA->salary)<(empB->salary)){
+            rtn= 1 ;
+        }else if((empA->salary)>(empB->salary)){
+            rtn= -1 ;
+        }else if((empA->salary)==(empB->salary)){
+            rtn= 0;
+        }
+    }
+    return rtn;
+}
+
+/** \brief Generates a unique ID identifier for each ACTOR added
+*
+* \param NO parameters are received
+* \return ID is the number of ID a rental will have
+*
+*/
+
+int generates_Next_Id_Employee()
+{
+    static int id = 1000;
+    id ++;
+    return id;
+}
