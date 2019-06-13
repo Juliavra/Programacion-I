@@ -46,7 +46,7 @@ Employee* employee_newParametros(char* id,char* name,char* hoursWorked,char* sal
 
 /** \brief Sets id parameter for 1 Employee
  *
- * \param char* id  id del empleado
+ * \param int* id  id del empleado
   * \param Employee* this linked List de empleados
   * \return rtn int valor de control 0 es Error  1 es correcto
  *
@@ -63,6 +63,15 @@ int employee_setId(Employee* this, int id)
     return rtn;
 }
 
+/** \brief Gets id parameter for 1 Employee
+ *
+ * \param int* id  id del empleado
+  * \param Employee* this linked List de empleados
+  * \return rtn int valor de control 0 es Error  1 es correcto
+ *
+ */
+
+
 int employee_getId(Employee* this, int* id)
 {
     int rtn = 0;
@@ -73,8 +82,6 @@ int employee_getId(Employee* this, int* id)
     }
     return rtn;
 }
-
-
 
 /** \brief Sets name parameter for 1 Employee
  *
@@ -95,6 +102,14 @@ int employee_setname(Employee* this,char* name)
     return rtn;
 }
 
+/** \brief Gets name parameter for 1 Employee
+ *
+ * \param char* name  nombre del empleado
+  * \param Employee* this linked List de empleados
+  * \return rtn int valor de control 0 es Error  1 es correcto
+ *
+ */
+
 int employee_getname(Employee* this,char* name)
 {
     int rtn = 0;
@@ -106,11 +121,9 @@ int employee_getname(Employee* this,char* name)
     return rtn;
 }
 
-
-
 /** \brief Sets hoursWorked parameter for 1 Employee
  *
- * \param char* hoursWorked horas trabajadas del empleado
+ * \param int* hoursWorked horas trabajadas del empleado
   * \param Employee* this linked List de empleados
   * \return rtn int valor de control 0 es Error  1 es correcto
  *
@@ -133,6 +146,15 @@ int employee_sethoursWorked(Employee* this, int hoursWorked)
     }
     return rtn;
 }
+
+
+/** \brief Gets hoursWorked parameter for 1 Employee
+ *
+ * \param int* hoursWorked  nombre del empleado
+  * \param Employee* this linked List de empleados
+  * \return rtn int valor de control 0 es Error  1 es correcto
+ *
+ */
 
 int employee_gethoursWorked(Employee* this,int* hoursWorked)
 {
@@ -165,6 +187,13 @@ int employee_setsalary(Employee* this,int salary)
     return rtn;
 }
 
+/** \brief Gets salary parameter for 1 Employee
+ *
+ * \param int* salary  salario del empleado
+  * \param Employee* this linked List de empleados
+  * \return rtn int valor de control 0 es Error  1 es correcto
+ *
+ */
 int employee_getsalary(Employee* this,int* salary)
 {
     int rtn = 0;
