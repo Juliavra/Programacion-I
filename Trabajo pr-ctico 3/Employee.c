@@ -20,6 +20,15 @@ Employee *employee_new()
 }
 
 ///-----------------------------------------------
+/** \brief Sets all parameters for 1 Employee
+ *
+ * \param char* id  id del empleado
+ * \param char* name    nombre del empleado
+ * \param char* hoursWorked horas trabajadas del empleado
+ * \param char* salary salario del empleado
+ * \return Employee's retorna la dirección de memoria del empleado cargado
+ *
+ */
 Employee* employee_newParametros(char* id,char* name,char* hoursWorked,char* salary)
 {
     int auxId, auxHoursWorked;
@@ -41,8 +50,13 @@ Employee* employee_newParametros(char* id,char* name,char* hoursWorked,char* sal
     return this;
 }
 
-
-///-----------------------------------------------
+/** \brief Sets id parameter for 1 Employee
+ *
+ * \param int* id  id del empleado
+  * \param Employee* this linked List de empleados
+  * \return rtn int valor de control 0 es Error  1 es correcto
+ *
+ */
 int employee_setId(Employee* this, int id)
 {
     int rtn = 0;
@@ -53,6 +67,14 @@ int employee_setId(Employee* this, int id)
     }
     return rtn;
 }
+
+/** \brief Gets id parameter for 1 Employee
+ *
+ * \param int* id  id del empleado
+  * \param Employee* this linked List de empleados
+  * \return rtn int valor de control 0 es Error  1 es correcto
+ *
+ */
 
 int employee_getId(Employee* this, int* id)
 {
@@ -65,6 +87,14 @@ int employee_getId(Employee* this, int* id)
     return rtn;
 }
 
+/** \brief Sets name parameter for 1 Employee
+ *
+ * \param char* name  nombre del empleado
+  * \param Employee* this linked List de empleados
+  * \return rtn int valor de control 0 es Error  1 es correcto
+ *
+ */
+
 int employee_setname(Employee* this,char* name)
 {
     int rtn = 0;
@@ -76,6 +106,14 @@ int employee_setname(Employee* this,char* name)
     return rtn;
 }
 
+/** \brief Gets name parameter for 1 Employee
+ *
+ * \param char* name  nombre del empleado
+  * \param Employee* this linked List de empleados
+  * \return rtn int valor de control 0 es Error  1 es correcto
+ *
+ */
+
 int employee_getname(Employee* this,char* name)
 {
     int rtn = 0;
@@ -86,6 +124,14 @@ int employee_getname(Employee* this,char* name)
     }
     return rtn;
 }
+
+/** \brief Sets hoursWorked parameter for 1 Employee
+ *
+ * \param int* hoursWorked horas trabajadas del empleado
+  * \param Employee* this linked List de empleados
+  * \return rtn int valor de control 0 es Error  1 es correcto
+ *
+ */
 
 int employee_sethoursWorked(Employee* this, int hoursWorked)
 {
@@ -105,6 +151,14 @@ int employee_sethoursWorked(Employee* this, int hoursWorked)
     return rtn;
 }
 
+/** \brief Gets hoursWorked parameter for 1 Employee
+ *
+ * \param int* hoursWorked  nombre del empleado
+  * \param Employee* this linked List de empleados
+  * \return rtn int valor de control 0 es Error  1 es correcto
+ *
+ */
+
 int employee_gethoursWorked(Employee* this,int* hoursWorked)
 {
     int rtn = 0;
@@ -115,6 +169,14 @@ int employee_gethoursWorked(Employee* this,int* hoursWorked)
     }
     return rtn;
 }
+
+/** \brief Sets salary parameter for 1 Employee
+ *
+ * \param char* salary salario del empleado
+  * \param Employee* this linked List de empleados
+  * \return rtn int valor de control 0 es Error  1 es correcto
+ *
+ */
 
 int employee_setsalary(Employee* this, float salary)
 {
@@ -127,6 +189,14 @@ int employee_setsalary(Employee* this, float salary)
     return rtn;
 }
 
+/** \brief Gets salary parameter for 1 Employee
+ *
+ * \param int* salary  salario del empleado
+ * \param Employee* this linked List de empleados
+ * \return rtn int valor de control 0 es Error  1 es correcto
+ *
+ */
+
 int employee_getsalary(Employee* this,int* salary)
 {
     int rtn = 0;
@@ -137,6 +207,13 @@ int employee_getsalary(Employee* this,int* salary)
     }
     return rtn;
 }
+
+/** \brief function to retrieve input data from user
+ *
+ * \param char* id Puntero al dato ID
+ * \return rtn int valor de control 0 es Error  1 es correcto
+ *
+ */
 
 int enterId (char *id)
 {
@@ -153,6 +230,13 @@ int enterId (char *id)
 
     return rtn;
 }
+
+/** \brief function to retrieve input data from user
+ *
+ * \param char* name Puntero al dato nombre
+ * \return rtn int valor de control 0 es Error  1 es correcto
+ *
+ */
 
 int enterName (char *name)
 {
@@ -174,7 +258,12 @@ int enterName (char *name)
     return rtn;
 }
 
-
+/** \brief function to retrieve input data from user
+ *
+ * \param char* hoursWorked Puntero al dato horas trabajadas
+ * \return rtn int valor de control 0 es Error  1 es correcto
+ *
+ */
 
 int enterHoursWorked (char *hoursWorked)
 {
@@ -192,6 +281,13 @@ int enterHoursWorked (char *hoursWorked)
     return rtn;
 }
 
+/** \brief function to retrieve input data from user
+ *
+ * \param char*  salary Puntero al dato salario
+ * \return rtn int valor de control 0 es Error  1 es correcto
+ *
+ */
+
 int enterSalary(char *salary)
 {
     int rtn=1, r=0;
@@ -205,6 +301,14 @@ int enterSalary(char *salary)
     ///printf("\nFOO ENTERSALARY salary:%s\n", salary);
     return rtn;
 }
+
+/** \brief function to sort by ID
+ *
+ * \param void* empleadoA   Puntero que contiene uno de los empleados a ordenar 
+ * \param void* empleadoB   Puntero que contiene el segundo de los empleados a ordenar
+ * \return rtn int valor de control 0 es ambos empleados son iguales / 1 empleadoA es menor que empleadoB / -1 empleadoA es mayor que empleadoB
+ *
+ */
 
 int employeeSortById(void* empleadoA, void* empleadoB)
 {
@@ -232,6 +336,15 @@ int employeeSortById(void* empleadoA, void* empleadoB)
     return rtn;
 }
 
+/** \brief function to sort by name
+ *
+ * \param void* empleadoA   Puntero que contiene uno de los empleados a ordenar 
+ * \param void* empleadoB   Puntero que contiene el segundo de los empleados a ordenar
+ * \return rtn int valor de control 0 es ambos empleados son iguales / 1 empleadoA es menor que empleadoB / -1 empleadoA es mayor que empleadoB
+ *
+ */
+
+
 int employeeSortByName(void* empleadoA, void* empleadoB)
 {
     int rtn= -1;
@@ -247,6 +360,14 @@ int employeeSortByName(void* empleadoA, void* empleadoB)
 
     return rtn;
 }
+
+/** \brief function to sort by hoursWorked
+ *
+ * \param void* empleadoA   Puntero que contiene uno de los empleados a ordenar 
+ * \param void* empleadoB   Puntero que contiene el segundo de los empleados a ordenar
+ * \return rtn int valor de control 0 es ambos empleados son iguales / 1 empleadoA es menor que empleadoB / -1 empleadoA es mayor que empleadoB
+ *
+ */
 
 int employeeSortByHours(void* empleadoA, void* empleadoB)
 {
@@ -274,6 +395,14 @@ int employeeSortByHours(void* empleadoA, void* empleadoB)
     return rtn;
 }
 
+/** \brief function to sort by Salary
+ *
+ * \param void* empleadoA   Puntero que contiene uno de los empleados a ordenar 
+ * \param void* empleadoB   Puntero que contiene el segundo de los empleados a ordenar
+ * \return rtn int valor de control 0 es ambos empleados son iguales / 1 empleadoA es menor que empleadoB / -1 empleadoA es mayor que empleadoB
+ *
+ */
+
 int employeeSortBySalary(void* empleadoA, void* empleadoB)
 {
     int rtn= -1;
@@ -300,17 +429,4 @@ int employeeSortBySalary(void* empleadoA, void* empleadoB)
     return rtn;
 }
 
-/** \brief Generates a unique ID identifier for each ACTOR added
-*
-* \param NO parameters are received
-* \return ID is the number of ID a rental will have
-*
-*/
-/*
-int generates_Next_Id_Employee()
-{
-    static int id = 1000;
-    id ++;
-    return id;
-}
-*/
+
