@@ -5,9 +5,9 @@
 
 /** \brief Parsea los datos los datos de los empleados desde el archivo data.csv (modo texto).
  *
- * \param FILE* pFile Puntero al archivo con el que se trabajará
- * \param pArrayListEmployee LinkedList* pArrayListEmployee Puntero al LinkedList de empleados
- * \return int i -1 es Puntero a File Nulo  i es la cantidad de elementos parseados desde el archivo
+ * \param path char*
+ * \param pArrayListEmployee LinkedList*
+ * \return int
  *
  */
 int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
@@ -42,9 +42,9 @@ int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
 ///****************************************************************************************************************************************************
 /** \brief Parsea los datos los datos de los empleados desde el archivo data.csv (modo binario).
  *
- * \param FILE* pFile Puntero al archivo con el que se trabajará
- * \param pArrayListEmployee LinkedList* pArrayListEmployee Puntero al LinkedList de empleados
- * \return int i es 0 si el Puntero a File es Nulo.  i es la cantidad de elementos parseados desde el archivo
+ * \param path char*
+ * \param pArrayListEmployee LinkedList*
+ * \return int
  *
  */
 int parser_EmployeeFromBinary(FILE* pFile , LinkedList* pArrayListEmployee)

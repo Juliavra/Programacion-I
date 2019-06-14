@@ -10,13 +10,9 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee);
 int controller_sortEmployee(LinkedList* pArrayListEmployee);
 int controller_saveAsText(char* path , LinkedList* pArrayListEmployee);
 int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee);
-
-
 int controller_findEmployee(LinkedList* pArrayListEmployee, int id);
-
 int controller_ListsSingleEmployee(LinkedList* pArrayListEmployee, int id);
-
-
-
+int generates_Next_Id_Employee (LinkedList* pArrayListEmployee);
+int controller_find_Biggest_ID(LinkedList* pArrayListEmployee);
 
 #endif

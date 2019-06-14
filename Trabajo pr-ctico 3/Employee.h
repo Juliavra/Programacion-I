@@ -22,7 +22,7 @@ int employee_getname(Employee* this,char* name);
 int employee_sethoursWorked(Employee* this,int hoursWorked);
 int employee_gethoursWorked(Employee* this,int* hoursWorked);
 
-int employee_setsalary(Employee* this,int salary);
+int employee_setsalary(Employee* this,float salary);
 int employee_getsalary(Employee* this,int* salary);
 
 int enterId (char *id);
