@@ -10,9 +10,9 @@
 
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo texto).
  *
- * \param path char*
- * \param pArrayListEmployee LinkedList*
- * \return int
+ * \param path char*    Puntero al path donde debe buscarse el archivo
+ * \param pArrayListEmployee LinkedList*    Puntero a la lista que contiene los empleados
+ * \return int rtn retorna 0 si es Error y 1 si es correcto
  *
  */
 int controller_loadFromText(char* path, LinkedList* pArrayListEmployee)
@@ -37,9 +37,9 @@ int controller_loadFromText(char* path, LinkedList* pArrayListEmployee)
 
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo binario).
  *
- * \param path char*
- * \param pArrayListEmployee LinkedList*
- * \return int
+ * \param path char*    Puntero al path donde debe buscarse el archivo
+ * \param pArrayListEmployee LinkedList*    Puntero a la lista que contiene los empleados
+ * \return int  rtn retorna 0 si es Error y 1 si es correcto
  *
  */
 int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
@@ -64,9 +64,8 @@ int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
 
 /** \brief Alta de empleados
  *
- * \param path char*
- * \param pArrayListEmployee LinkedList*
- * \return int
+ * \param pArrayListEmployee LinkedList*    Puntero a la lista que contiene los empleados
+ * \return int  rtn retorna -1 si es Error y 1 si es correcto
  *
  */
 
@@ -124,10 +123,9 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
 ///*************************************************************************************************************
 ///*************************************************************************************************************
 /** \brief Modificar datos de empleado
- *
- * \param path char*
- * \param pArrayListEmployee LinkedList*
- * \return int
+ *  
+ * \param pArrayListEmployee LinkedList*    Puntero a la lista que contiene los empleados
+ * \return int  rtn retorna -1 si es Error y 1 si es correcto
  *
  */
 
@@ -205,9 +203,8 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
 
 /** \brief Baja de empleado
  *
- * \param path char*
- * \param pArrayListEmployee LinkedList*
- * \return int
+ * \param pArrayListEmployee LinkedList*    Puntero a la lista que contiene los empleados
+ * \return int     rtn retorna -1 si es Error y 1 si es correcto
  *
  */
 int controller_removeEmployee(LinkedList* pArrayListEmployee)
@@ -261,9 +258,8 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
 
 /** \brief Listar empleados
  *
- * \param path char*
- * \param pArrayListEmployee LinkedList*
- * \return int
+ * \param pArrayListEmployee LinkedList*    Puntero a la lista que contiene los empleados
+ * \return int  rtn retorna -1 si es Error y 1 si es correcto
  *
  */
 int controller_ListEmployee(LinkedList* pArrayListEmployee)
@@ -281,6 +277,14 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
     return rtn;
 }
 
+/** \brief Listar un empleado
+ *
+ * \param pArrayListEmployee LinkedList*    Puntero a la lista que contiene los empleados
+ * \param id int es el valor de id que debe ser impreso
+* \return int  rtn retorna -1 si es Error y 1 si es correcto
+ *
+ */
+
 int controller_ListsSingleEmployee(LinkedList* pArrayListEmployee, int id)
 {
     Employee *pEmpleado;
@@ -295,9 +299,8 @@ int controller_ListsSingleEmployee(LinkedList* pArrayListEmployee, int id)
 
 /** \brief Ordenar empleados
  *
- * \param path char*
- * \param pArrayListEmployee LinkedList*
- * \return int
+ * \param pArrayListEmployee LinkedList*    Puntero a la lista que contiene los empleados
+ * \return int  rtn retorna -1 si es Error y 1 si es correcto
  *
  */
 int controller_sortEmployee(LinkedList* pArrayListEmployee)
@@ -361,9 +364,9 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
 
 /** \brief Guarda los datos de los empleados en el archivo data.csv (modo texto).
  *
- * \param path char*
- * \param pArrayListEmployee LinkedList*
- * \return int
+ * \param path char*    Puntero al path donde debe guardarse el archivo
+ * \param pArrayListEmployee LinkedList*    Puntero a la lista que contiene los empleados
+ * \return int  rtn retorna -1 si es Error y 1 si es correcto
  *
  */
 int controller_saveAsText(char* path, LinkedList* pArrayListEmployee)
@@ -394,9 +397,9 @@ int controller_saveAsText(char* path, LinkedList* pArrayListEmployee)
 
 /** \brief Guarda los datos de los empleados en el archivo data.csv (modo binario).
  *
- * \param path char*
- * \param pArrayListEmployee LinkedList*
- * \return int
+ * \param path char*    Puntero al path donde debe guardarse el archivo
+ * \param pArrayListEmployee LinkedList*    Puntero a la lista que contiene los empleados
+ * \return int  rtn retorna -1 si es Error y 1 si es correcto
  *
  */
 int controller_saveAsBinary(char* path, LinkedList* pArrayListEmployee)
@@ -426,6 +429,13 @@ int controller_saveAsBinary(char* path, LinkedList* pArrayListEmployee)
 }
 ///**************************************************************************************************************
 ///**************************************************************************************************************
+/** \brief busca un empleado usando el ID
+ *
+ * \param pArrayListEmployee LinkedList*    Puntero a la lista que contiene los empleados
+ * \param id int es el valor que se usa para buscar un empleado en concreto
+* \return int  rtn retorna -1 si es Error y 1 si es correcto
+ *
+ */
 int controller_findEmployee(LinkedList* pArrayListEmployee, int id) ///-1 NO LO ENCONTRO
 {
     Employee* pEmployee;
@@ -444,10 +454,10 @@ int controller_findEmployee(LinkedList* pArrayListEmployee, int id) ///-1 NO LO 
 ///---------------------------------------------------------------------------------------------------
 ///---------------------------------------------------------------------------------------------------
 
-/** \brief Generates a unique ID identifier for each ACTOR added
+/** \brief Generates a unique ID identifier for each Employee added
 *
-* \param NO parameters are received
-* \return ID is the number of ID a rental will have
+ * \param pArrayListEmployee LinkedList*    Puntero a la lista que contiene los empleados
+* \return ID is the number of ID an employee will have
 *
 */
 
@@ -464,8 +474,8 @@ int generates_Next_Id_Employee (LinkedList* pArrayListEmployee)
 
 /** \brief Searches for the biggest ID used to create a new one, with the next number
  *
- * \param pArrayListEmployee LinkedList*
- * \return int MaxID
+ * \param pArrayListEmployee LinkedList*    Puntero a la lista que contiene los empleados
+ * \return int MaxID    numero máximo de ID utilizado en la lista, esto no contempla los posibles ID´s utilizados y luego borrado, puesto que los sobreescribe.
  *
  */
 int controller_find_Biggest_ID(LinkedList* pArrayListEmployee) ///-1 NO LO ENCONTRO
@@ -485,7 +495,7 @@ int controller_find_Biggest_ID(LinkedList* pArrayListEmployee) ///-1 NO LO ENCON
             }
             else if(maxID == pEmployee->id)
             {
-                printf (" has caido en un vortex espacio temporal, no deber�a haber dos ID con igual valor, huye!!");
+                printf (" has caido en un vortex espacio temporal, no debería haber dos ID con igual valor, huye!!");
             }
         }
     }
