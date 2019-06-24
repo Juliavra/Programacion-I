@@ -223,14 +223,12 @@ void startTesting(int testGroup)
         case 19:
             utest_printStartTesting("ll_sort()");
             utest_init();
-          //  utest_startTest(sortTestCase01,sortTestSetup,">Caso [Verifica retorno con parametros correctos]");
+            utest_startTest(sortTestCase01,sortTestSetup,">Caso [Verifica retorno con parametros correctos]");
             utest_startTest(sortTestCase02,sortTestSetup,">Caso [Verifica si la lista se encuentra correctamente ordenada]");
-          //  utest_startTest(sortTestCase03,sortTestSetup,">Caso [Intenta ordenar una lista NULL]");
-           // utest_startTest(sortTestCase04,sortTestSetup,">Caso [Intenta ordenar pasando un puntero a la funcion criterio NULL]");
-           // utest_startTest(sortTestCase05,sortTestSetup,">Caso [Intenta ordenar pasando el orden fuera de valor]");
+            utest_startTest(sortTestCase03,sortTestSetup,">Caso [Intenta ordenar una lista NULL]");
+            utest_startTest(sortTestCase04,sortTestSetup,">Caso [Intenta ordenar pasando un puntero a la funcion criterio NULL]");
+            utest_startTest(sortTestCase05,sortTestSetup,">Caso [Intenta ordenar pasando el orden fuera de valor]");
             utest_printStatistics("ll_sort()");
             break;
     }
-
-
 }

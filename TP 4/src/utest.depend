@@ -4224,7 +4224,7 @@
 	"../../inc/LinkedList.h"
 	"../../testing/inc/Employee.h"
 
-1557087750 source:c:\utn\tps labo 2do intento\linkedlist_cascara_v5\linkedlist_cascara_v5\testing\src\main_test.c
+1560044375 source:c:\utn\tps labo 2do intento\linkedlist_cascara_v5\linkedlist_cascara_v5\testing\src\main_test.c
 	"../../testing/utest.h"
 	<stdio.h>
 	<stdlib.h>
@@ -4353,7 +4353,7 @@
 	<string.h>
 	"../inc/LinkedList.h"
 
-1557087467 source:c:\utn\tps labo 2do intento\linkedlist_cascara_v5\linkedlist_cascara_v5\src\main.c
+1560043868 source:c:\utn\tps labo 2do intento\linkedlist_cascara_v5\linkedlist_cascara_v5\src\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -4363,4 +4363,733 @@
 1532345168 c:\utn\tps labo 2do intento\linkedlist_cascara_v5\linkedlist_cascara_v5\testing\inc\main_test.h
 
 1557030213 source:c:\utn\tps labo 2do intento\linkedlist_cascara_v5\linkedlist_cascara_v5\src\codigo.c
+
+1556755318 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\src\addnodetest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345152 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\utest.h
+
+1532345152 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\inc\linkedlist.h
+
+1532345166 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\inc\employee.h
+
+1532345172 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\src\addtest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345170 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\src\cleartest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345170 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\src\clonetest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345174 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\src\containsalltest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345176 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\src\containstest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\src\deletelinkedlisttest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\src\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../inc/Employee.h"
+
+1556733548 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\src\getnodetest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\src\gettest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345174 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\src\indexoftest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345170 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\src\isemptytest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\src\lentest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1560044375 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\src\main_test.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	"../inc/newTest.h"
+	"../inc/addTest.h"
+	"../inc/getNodeTest.h"
+	"../inc/addNodeTest.h"
+	"../inc/deleteLinkedListTest.h"
+	"../inc/lenTest.h"
+	"../inc/getTest.h"
+	"../inc/containsTest.h"
+	"../inc/setTest.h"
+	"../inc/removeTest.h"
+	"../inc/clearTest.h"
+	"../inc/cloneTest.h"
+	"../inc/pushTest.h"
+	"../inc/indexOfTest.h"
+	"../inc/isEmptyTest.h"
+	"../inc/popTest.h"
+	"../inc/subListTest.h"
+	"../inc/containsAllTest.h"
+	"../inc/sortTest.h"
+
+1532345166 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\inc\newtest.h
+
+1532345170 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\inc\addtest.h
+
+1532345168 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\inc\getnodetest.h
+
+1541030430 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\inc\addnodetest.h
+
+1532345168 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\inc\deletelinkedlisttest.h
+
+1532345168 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\inc\lentest.h
+
+1532345166 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\inc\gettest.h
+
+1532345168 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\inc\containstest.h
+
+1532345170 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\inc\settest.h
+
+1532345170 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\inc\removetest.h
+
+1532345170 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\inc\cleartest.h
+
+1532345166 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\inc\clonetest.h
+
+1532345168 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\inc\pushtest.h
+
+1532345166 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\inc\indexoftest.h
+
+1532345166 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\inc\isemptytest.h
+
+1532345170 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\inc\poptest.h
+
+1532345168 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\inc\sublisttest.h
+
+1532345166 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\inc\containsalltest.h
+
+1532345170 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\inc\sorttest.h
+
+1532345172 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\src\newtest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+
+1532345174 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\src\poptest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\src\pushtest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\src\removetest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345176 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\src\settest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\src\sorttest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345174 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\src\sublisttest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345152 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\utest.c
+	"utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1557030213 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\src\codigo.c
+
+1560044499 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\src\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../inc/LinkedList.h"
+
+1560043868 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\src\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../testing/inc/main_test.h"
+	"../inc/LinkedList.h"
+
+1532345168 c:\utn\tps labo 2do intento\tp 4 final\tp 4 final\testing\inc\main_test.h
+
+1556755318 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\src\addnodetest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345152 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\utest.h
+
+1532345152 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\inc\linkedlist.h
+
+1532345166 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\inc\employee.h
+
+1532345172 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\src\addtest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345170 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\src\cleartest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345170 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\src\clonetest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345174 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\src\containsalltest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345176 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\src\containstest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\src\deletelinkedlisttest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\src\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../inc/Employee.h"
+
+1556733548 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\src\getnodetest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\src\gettest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345174 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\src\indexoftest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345170 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\src\isemptytest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\src\lentest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1560044375 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\src\main_test.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	"../inc/newTest.h"
+	"../inc/addTest.h"
+	"../inc/getNodeTest.h"
+	"../inc/addNodeTest.h"
+	"../inc/deleteLinkedListTest.h"
+	"../inc/lenTest.h"
+	"../inc/getTest.h"
+	"../inc/containsTest.h"
+	"../inc/setTest.h"
+	"../inc/removeTest.h"
+	"../inc/clearTest.h"
+	"../inc/cloneTest.h"
+	"../inc/pushTest.h"
+	"../inc/indexOfTest.h"
+	"../inc/isEmptyTest.h"
+	"../inc/popTest.h"
+	"../inc/subListTest.h"
+	"../inc/containsAllTest.h"
+	"../inc/sortTest.h"
+
+1532345166 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\inc\newtest.h
+
+1532345170 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\inc\addtest.h
+
+1532345168 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\inc\getnodetest.h
+
+1541030430 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\inc\addnodetest.h
+
+1532345168 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\inc\deletelinkedlisttest.h
+
+1532345168 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\inc\lentest.h
+
+1532345166 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\inc\gettest.h
+
+1532345168 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\inc\containstest.h
+
+1532345170 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\inc\settest.h
+
+1532345170 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\inc\removetest.h
+
+1532345170 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\inc\cleartest.h
+
+1532345166 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\inc\clonetest.h
+
+1532345168 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\inc\pushtest.h
+
+1532345166 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\inc\indexoftest.h
+
+1532345166 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\inc\isemptytest.h
+
+1532345170 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\inc\poptest.h
+
+1532345168 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\inc\sublisttest.h
+
+1532345166 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\inc\containsalltest.h
+
+1532345170 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\inc\sorttest.h
+
+1532345172 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\src\newtest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+
+1532345174 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\src\poptest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\src\pushtest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\src\removetest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345176 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\src\settest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\src\sorttest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345174 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\src\sublisttest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345152 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\utest.c
+	"utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1557030213 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\src\codigo.c
+
+1560044499 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\src\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../inc/LinkedList.h"
+
+1561343143 source:c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\src\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../testing/inc/main_test.h"
+	"../inc/LinkedList.h"
+
+1532345168 c:\utn\tps labo 2do intento\tp 4 final\tp 4 casi final\testing\inc\main_test.h
+
+1556755318 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\src\addnodetest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345152 c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\utest.h
+
+1532345152 c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\inc\linkedlist.h
+
+1532345166 c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\inc\employee.h
+
+1532345172 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\src\addtest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345170 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\src\cleartest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345170 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\src\clonetest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345174 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\src\containsalltest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345176 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\src\containstest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\src\deletelinkedlisttest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\src\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../inc/Employee.h"
+
+1556733548 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\src\getnodetest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\src\gettest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345174 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\src\indexoftest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345170 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\src\isemptytest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\src\lentest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1561343204 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\src\main_test.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	"../inc/newTest.h"
+	"../inc/addTest.h"
+	"../inc/getNodeTest.h"
+	"../inc/addNodeTest.h"
+	"../inc/deleteLinkedListTest.h"
+	"../inc/lenTest.h"
+	"../inc/getTest.h"
+	"../inc/containsTest.h"
+	"../inc/setTest.h"
+	"../inc/removeTest.h"
+	"../inc/clearTest.h"
+	"../inc/cloneTest.h"
+	"../inc/pushTest.h"
+	"../inc/indexOfTest.h"
+	"../inc/isEmptyTest.h"
+	"../inc/popTest.h"
+	"../inc/subListTest.h"
+	"../inc/containsAllTest.h"
+	"../inc/sortTest.h"
+
+1532345166 c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\inc\newtest.h
+
+1532345170 c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\inc\addtest.h
+
+1532345168 c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\inc\getnodetest.h
+
+1541030430 c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\inc\addnodetest.h
+
+1532345168 c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\inc\deletelinkedlisttest.h
+
+1532345168 c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\inc\lentest.h
+
+1532345166 c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\inc\gettest.h
+
+1532345168 c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\inc\containstest.h
+
+1532345170 c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\inc\settest.h
+
+1532345170 c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\inc\removetest.h
+
+1532345170 c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\inc\cleartest.h
+
+1532345166 c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\inc\clonetest.h
+
+1532345168 c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\inc\pushtest.h
+
+1532345166 c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\inc\indexoftest.h
+
+1532345166 c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\inc\isemptytest.h
+
+1532345170 c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\inc\poptest.h
+
+1532345168 c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\inc\sublisttest.h
+
+1532345166 c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\inc\containsalltest.h
+
+1532345170 c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\inc\sorttest.h
+
+1532345172 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\src\newtest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+
+1532345174 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\src\poptest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\src\pushtest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\src\removetest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345176 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\src\settest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345172 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\src\sorttest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345174 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\src\sublisttest.c
+	"../../testing/utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../../inc/LinkedList.h"
+	"../../testing/inc/Employee.h"
+
+1532345152 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\testing\utest.c
+	"utest.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1557030213 source:c:\users\who\desktop\puntero  a funcion implementado\programacion-i-master\programacion-i-master\tp 4 final\tp 4 casi final\src\codigo.c
 
